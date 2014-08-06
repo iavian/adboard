@@ -13,9 +13,14 @@ search: true
 # Introduction
 
 API endpoints for adboard
+# Base URL
+## Development
+`http://adboard.iavian.net:8080/adboard`
+## Production
+TODO
 # Authentication
 
-> To authorize, use this code
+> TODO, needs discussion
 
 ```shell
 # With shell, you can just pass the correct header with each request
@@ -23,35 +28,9 @@ curl "api_endpoint_here"
   -H "Authorization: meowmeowmeow"
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+# User
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace `meowmeowmeow` with your personal API key.
-</aside>
-
-# Kittens
-
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import 'kittn'
-
-api = Kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
+## Create New User 
 
 ```shell
 curl "http://example.com/api/kittens"
@@ -79,7 +58,7 @@ curl "http://example.com/api/kittens"
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint creates new user.
 
 ### HTTP Request
 
