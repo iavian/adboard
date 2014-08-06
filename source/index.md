@@ -15,7 +15,7 @@ search: true
 API endpoints for adboard
 # Authentication
 
-> To authorize, use this code:
+> To authorize, use this code
 
 ```shell
 # With shell, you can just pass the correct header with each request
