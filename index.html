@@ -91,7 +91,40 @@ curl <span class="s2">"api_endpoint_here"</span>
 <p><aside class="success">
 Remember —  POST as JSON with application/json Content-Type
 </aside></p>
-<h1 id='scoop'>Scoop</h1><h2 id='list-scoops'>List Scoops</h1>
+<h1 id='scoop'>Scoop</h1><h2 id='list-scoops'>List Scoops</h1><pre class="highlight shell">curl <span class="s2">"/scoop"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><span class="w">  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uuid"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></pre>
+
+<p>This endpoint gets all scoop for a user. the user has to be authorized</p>
+<h3 id='http-request'>HTTP Request</h1>
+<p><code class="prettyprint">GET /scoop/{page}/{limit}</code></p>
+<h3 id='query-parameters'>Query Parameters</h1>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>page</td>
+<td>false, default 1</td>
+<td>for pagination</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>false, default <code class="prettyprint">10</code></td>
+<td>limits # of records</td>
+</tr>
+</tbody></table>
+
           <h1 id='errors'>Errors</h1>
 <p><aside class="notice">This error section is stored in a separate file in <code class="prettyprint">includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the <code class="prettyprint">includes</code> folder and add them to the top of your <code class="prettyprint">index.md</code>&rsquo;s frontmatter. Files are included in the order listed.</aside></p>
 
