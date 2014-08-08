@@ -89,7 +89,7 @@ page | false, default 1 |  for pagination
 limit | false, default `10` | limits # of records
 
 
-## List Scoops
+## Get a Scoop
 
 ```shell
 curl "/scoop/{scoopid}"
