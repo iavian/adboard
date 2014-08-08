@@ -64,3 +64,28 @@ Remember —  POST as JSON with application/json Content-Type
 # Scoop
 ## List Scoops
 
+```shell
+curl "/scoop"
+```
+> The above command returns JSON structured like this:
+
+```json
+  {
+    "user": "uuid"
+  }
+```
+
+This endpoint gets all scoop for a user. the user has to be authorized
+
+### HTTP Request
+
+`GET /scoop/{page}/{limit}`
+
+### Query Parameters
+
+Parameter | Required | Description
+--------- | ------- | -----------
+page | false, default 1 |  for pagination
+limit | false, default `10` | limits # of records
+
+
