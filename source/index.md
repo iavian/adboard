@@ -89,3 +89,30 @@ page | false, default 1 |  for pagination
 limit | false, default `10` | limits # of records
 
 
+## List Scoops
+
+```shell
+curl "/scoop/{scoopid}"
+```
+> The above command returns JSON structured like this:
+
+```json
+  {
+    "user": "uuid"
+  }
+```
+
+This endpoint gets a scoop for the authorized user
+
+### HTTP Request
+
+`GET /scoop/{scoopid}`
+
+### Query Parameters
+
+Parameter | Required | Description
+--------- | ------- | -----------
+scoopid | true |  id of the scoop as returned by /scoop list
+
+
+
