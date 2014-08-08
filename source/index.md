@@ -60,3 +60,7 @@ refreshToken | true | from gmail
 <aside class="success">
 Remember —  POST as JSON with application/json Content-Type
 </aside>
+
+# Scoop
+## List Scoops
+
