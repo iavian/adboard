@@ -47,7 +47,7 @@
 </blockquote>
 <pre class="highlight shell"><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
+  -H <span class="s2">"Authorization: user-uuid"</span>
 </pre>
 <h1 id='user'>User</h1><h2 id='create-new-user'>Create New User</h1><pre class="highlight shell">curl <span class="s2">"/user"</span>
 </pre>
@@ -97,9 +97,26 @@ Remember —  POST as JSON with application/json Content-Type
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><span class="w">  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uuid"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+<pre class="highlight json"><span class="w">
+</span><span class="p">[</span><span class="w">
+   </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"d72cf5f7-cad7-42fe-a709-3b4361387300"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"imgobjs"</span><span class="p">:{</span><span class="w">
+         </span><span class="s2">"img"</span><span class="p">:[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+               </span><span class="s2">"area"</span><span class="p">:</span><span class="mi">234360</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"height"</span><span class="p">:</span><span class="mi">310</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"width"</span><span class="p">:</span><span class="mi">756</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"squareRatio"</span><span class="p">:</span><span class="mf">41.00529098510742</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"src"</span><span class="p">:</span><span class="s2">"http://rm.recs.richrelevance.com/rrmail/imgreq?a=88ac00e4f3e16e44&amp;version=2&amp;zoneName=richmail&amp;campaignId=77371&amp;userId=483cdb9a2cb6c27af1fa83d499526643&amp;date=07-18-2014&amp;o=123&amp;EMID=B2C_2016_0718_965_Cabinetry"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+         </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"subject"</span><span class="p">:</span><span class="s2">"Additional Savings on Kitchen and Bath Cabinets, Travel, School Essentials and More!"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"company"</span><span class="p">:</span><span class="s2">"Target"</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+
 </span></pre>
 
 <p>This endpoint gets all scoop for a user. the user has to be authorized</p>
@@ -115,12 +132,12 @@ Remember —  POST as JSON with application/json Content-Type
 </thead><tbody>
 <tr>
 <td>page</td>
-<td>false, default 1</td>
+<td>true</td>
 <td>for pagination</td>
 </tr>
 <tr>
 <td>limit</td>
-<td>false, default <code class="prettyprint">10</code></td>
+<td>true</td>
 <td>limits # of records</td>
 </tr>
 </tbody></table>
@@ -130,9 +147,22 @@ Remember —  POST as JSON with application/json Content-Type
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><span class="w">  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"uuid"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+<pre class="highlight json"><span class="w">   </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"d72cf5f7-cad7-42fe-a709-3b4361387300"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"imgobjs"</span><span class="p">:{</span><span class="w">
+         </span><span class="s2">"img"</span><span class="p">:[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+               </span><span class="s2">"area"</span><span class="p">:</span><span class="mi">234360</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"height"</span><span class="p">:</span><span class="mi">310</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"width"</span><span class="p">:</span><span class="mi">756</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"squareRatio"</span><span class="p">:</span><span class="mf">41.00529098510742</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"src"</span><span class="p">:</span><span class="s2">"http://rm.recs.richrelevance.com/rrmail/imgreq?a=88ac00e4f3e16e44&amp;version=2&amp;zoneName=richmail&amp;campaignId=77371&amp;userId=483cdb9a2cb6c27af1fa83d499526643&amp;date=07-18-2014&amp;o=123&amp;EMID=B2C_2016_0718_965_Cabinetry"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+         </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"subject"</span><span class="p">:</span><span class="s2">"Additional Savings on Kitchen and Bath Cabinets, Travel, School Essentials and More!"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"company"</span><span class="p">:</span><span class="s2">"Target"</span><span class="w">
+   </span><span class="p">}</span><span class="w">
 </span></pre>
 
 <p>This endpoint gets a scoop for the authorized user</p>
