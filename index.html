@@ -182,11 +182,67 @@ Remember —  POST as JSON with application/json Content-Type
 <td>id of the scoop as returned by /scoop list</td>
 </tr>
 </tbody></table>
+<h2 id='delete-a-scoop'>Delete a Scoop</h1><pre class="highlight shell">curl <span class="s2">"/scoop/{scoopid}"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json"><span class="w">   </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="kc">true</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span></pre>
+
+<p>This endpoint gets a scoop for the authorized user</p>
+<h3 id='http-request'>HTTP Request</h1>
+<p><code class="prettyprint">DELETE /scoop/{scoopid}</code></p>
+<h3 id='query-parameters'>Query Parameters</h1>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>scoopid</td>
+<td>true</td>
+<td>id of the scoop as returned by /scoop list</td>
+</tr>
+</tbody></table>
+<h1 id='mail'>Mail</h1><h2 id='get-a-mail'>Get a Mail</h1><pre class="highlight shell">curl <span class="s2">"/mail"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns HTML:</p>
+</blockquote>
+<pre class="highlight html">
+<span class="nt">&lt;html&gt;</span>...<span class="nt">&lt;/html&gt;</span>
+
+</pre>
+
+<p>This endpoint gets all scoop for a user. the user has to be authorized</p>
+<h3 id='http-request'>HTTP Request</h1>
+<p><code class="prettyprint">GET /mail/{scoopid}</code></p>
+<h3 id='query-parameters'>Query Parameters</h1>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>scoopid</td>
+<td>true</td>
+<td>ScoopId</td>
+</tr>
+</tbody></table>
 
           <h1 id='errors'>Errors</h1>
 <p><aside class="notice">This error section is stored in a separate file in <code class="prettyprint">includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the <code class="prettyprint">includes</code> folder and add them to the top of your <code class="prettyprint">index.md</code>&rsquo;s frontmatter. Files are included in the order listed.</aside></p>
 
-<p>The Kittn API uses the following error codes:</p>
+<p>The API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -204,31 +260,19 @@ Remember —  POST as JSON with application/json Content-Type
 </tr>
 <tr>
 <td>403</td>
-<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
+<td>Forbidden &ndash; The request is hidden for administrators only</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found &ndash; The specified kitten could not be found</td>
+<td>Not Found &ndash; The specified scoop/resource could not be found</td>
 </tr>
 <tr>
 <td>405</td>
-<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
+<td>Method Not Allowed &ndash; You tried to access a resource with an invalid method</td>
 </tr>
 <tr>
 <td>406</td>
 <td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone &ndash; The kitten requested has been removed from our servers</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&rsquo;m a teapot</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slown down!</td>
 </tr>
 <tr>
 <td>500</td>
