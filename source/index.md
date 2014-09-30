@@ -11,7 +11,6 @@ search: true
 ---
 
 # Introduction
-
 API endpoints for adboard
 # Base URL
 ## Development
@@ -30,7 +29,7 @@ curl "api_endpoint_here"
 
 # User
 
-## Create New User 
+## Create New User
 
 ```shell
 curl "/user"
@@ -55,7 +54,7 @@ Parameter | Required | Description
 --------- | ------- | -----------
 email | true |  email
 accessToken | true | accessToken from gmail
-refreshToken | true | from gmail 
+refreshToken | true | from gmail
 
 <aside class="success">
 Remember —  POST as JSON with application/json Content-Type
@@ -145,4 +144,54 @@ Parameter | Required | Description
 scoopid | true |  id of the scoop as returned by /scoop list
 
 
+## Delete a Scoop
 
+```shell
+curl "/scoop/{scoopid}"
+```
+> The above command returns JSON structured like this:
+
+```json
+   {
+      "status":true
+   }
+```
+
+This endpoint gets a scoop for the authorized user
+
+### HTTP Request
+
+`DELETE /scoop/{scoopid}`
+
+### Query Parameters
+
+Parameter | Required | Description
+--------- | ------- | -----------
+scoopid | true |  id of the scoop as returned by /scoop list
+
+
+# Mail
+## Get a Mail
+
+```shell
+curl "/mail"
+```
+> The above command returns HTML:
+
+```html
+
+<html>...</html>
+
+```
+
+This endpoint gets all scoop for a user. the user has to be authorized
+
+### HTTP Request
+
+`GET /mail/{scoopid}`
+
+### Query Parameters
+
+Parameter | Required | Description
+--------- | ------- | -----------
+scoopid | true  |  ScoopId
