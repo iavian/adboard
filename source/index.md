@@ -19,7 +19,7 @@ API endpoints for adboard
 TODO
 # Authentication
 
-> TODO, needs discussion
+> TODO, needs discussion (?)
 
 ```shell
 # With shell, you can just pass the correct header with each request
