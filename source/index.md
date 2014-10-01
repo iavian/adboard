@@ -85,7 +85,8 @@ curl "/scoop"
          ]
       },
       "subject":"Additional Savings on Kitchen and Bath Cabinets, Travel, School Essentials and More!",
-      "company":"Target"
+      "company":"Target",
+      "txt": "textual information in the email"
    }
 ]
 
@@ -127,7 +128,8 @@ curl "/scoop/{scoopid}"
          ]
       },
       "subject":"Additional Savings on Kitchen and Bath Cabinets, Travel, School Essentials and More!",
-      "company":"Target"
+      "company":"Target",
+      "txt": "textual information in the email"
    }
 ```
 
