@@ -291,6 +291,72 @@ Remember —  POST as JSON with application/json Content-Type
 <td>limits # of records</td>
 </tr>
 </tbody></table>
+<h2 id='add-to-favorite'>Add to Favorite</h1><pre class="highlight shell">curl <span class="s2">"/favorite/{scoopid}"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns json:</p>
+</blockquote>
+<pre class="highlight json"><span class="w">
+
+   </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"count"</span><span class="p">:</span><span class="mi">1</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+
+
+</span></pre>
+
+<p>This endpoint saves a scoop to favorite. the user has to be authorized</p>
+<h3 id='http-request'>HTTP Request</h1>
+<p><code class="prettyprint">POST /favorite/{scoopid}</code></p>
+<h3 id='query-parameters'>Query Parameters</h1>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>scoopid</td>
+<td>true</td>
+<td>scoop to favorite</td>
+</tr>
+</tbody></table>
+<h2 id='unfavorite'>UnFavorite</h1><pre class="highlight shell">curl <span class="s2">"/favorite/{scoopid}"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns json:</p>
+</blockquote>
+<pre class="highlight json"><span class="w">
+
+   </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"count"</span><span class="p">:</span><span class="mi">1</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+
+
+</span></pre>
+
+<p>This endpoint removes a scoop from favorite(unfavorite). the user has to be authorized</p>
+<h3 id='http-request'>HTTP Request</h1>
+<p><code class="prettyprint">DELETE /favorite/{scoopid}</code></p>
+<h3 id='query-parameters'>Query Parameters</h1>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>scoopid</td>
+<td>true</td>
+<td>scoop to favorite</td>
+</tr>
+</tbody></table>
 
           <h1 id='errors'>Errors</h1>
 <p><aside class="notice">This error section is stored in a separate file in <code class="prettyprint">includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the <code class="prettyprint">includes</code> folder and add them to the top of your <code class="prettyprint">index.md</code>&rsquo;s frontmatter. Files are included in the order listed.</aside></p>
