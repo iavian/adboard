@@ -201,13 +201,6 @@ scoopid | true  |  ScoopId
 # Favorite
 ## List Favorites
 
-### Query Parameters
-
-Parameter | Required | Description
---------- | ------- | -----------
-page | true  |  for pagination
-limit | true | limits # of records
-
 ```shell
 curl "/favorite/{page}/{limit}"
 ```
@@ -240,10 +233,11 @@ This endpoint gets all favorite scoops for a user. the user has to be authorized
 
 ### HTTP Request
 
-`GET /mail/{scoopid}`
+`GET /favorite/{page}/{limit}`
 
 ### Query Parameters
 
 Parameter | Required | Description
 --------- | ------- | -----------
-limit | true  |  ScoopId
+page | true  |  for pagination
+limit | true | limits # of records
