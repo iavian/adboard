@@ -240,26 +240,7 @@ Remember —  POST as JSON with application/json Content-Type
 <td>ScoopId</td>
 </tr>
 </tbody></table>
-<h1 id='favorite'>Favorite</h1><h2 id='list-favorites'>List Favorites</h1><h3 id='query-parameters'>Query Parameters</h1>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>page</td>
-<td>true</td>
-<td>for pagination</td>
-</tr>
-<tr>
-<td>limit</td>
-<td>true</td>
-<td>limits # of records</td>
-</tr>
-</tbody></table>
-<pre class="highlight shell">curl <span class="s2">"/favorite/{page}/{limit}"</span>
+<h1 id='favorite'>Favorite</h1><h2 id='list-favorites'>List Favorites</h1><pre class="highlight shell">curl <span class="s2">"/favorite/{page}/{limit}"</span>
 </pre>
 
 <blockquote>
@@ -290,7 +271,7 @@ Remember —  POST as JSON with application/json Content-Type
 
 <p>This endpoint gets all favorite scoops for a user. the user has to be authorized</p>
 <h3 id='http-request'>HTTP Request</h1>
-<p><code class="prettyprint">GET /mail/{scoopid}</code></p>
+<p><code class="prettyprint">GET /favorite/{page}/{limit}</code></p>
 <h3 id='query-parameters'>Query Parameters</h1>
 <table><thead>
 <tr>
@@ -300,9 +281,14 @@ Remember —  POST as JSON with application/json Content-Type
 </tr>
 </thead><tbody>
 <tr>
+<td>page</td>
+<td>true</td>
+<td>for pagination</td>
+</tr>
+<tr>
 <td>limit</td>
 <td>true</td>
-<td>ScoopId</td>
+<td>limits # of records</td>
 </tr>
 </tbody></table>
 
