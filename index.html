@@ -240,6 +240,71 @@ Remember —  POST as JSON with application/json Content-Type
 <td>ScoopId</td>
 </tr>
 </tbody></table>
+<h1 id='favorite'>Favorite</h1><h2 id='list-favorites'>List Favorites</h1><h3 id='query-parameters'>Query Parameters</h1>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>page</td>
+<td>true</td>
+<td>for pagination</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>true</td>
+<td>limits # of records</td>
+</tr>
+</tbody></table>
+<pre class="highlight shell">curl <span class="s2">"/favorite/{page}/{limit}"</span>
+</pre>
+
+<blockquote>
+<p>The above command returns json:</p>
+</blockquote>
+<pre class="highlight json"><span class="w">
+</span><span class="p">[</span><span class="w">
+   </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"d72cf5f7-cad7-42fe-a709-3b4361387300"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"imgobjs"</span><span class="p">:{</span><span class="w">
+         </span><span class="s2">"img"</span><span class="p">:[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+               </span><span class="s2">"area"</span><span class="p">:</span><span class="mi">234360</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"height"</span><span class="p">:</span><span class="mi">310</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"width"</span><span class="p">:</span><span class="mi">756</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"squareRatio"</span><span class="p">:</span><span class="mf">41.00529098510742</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"src"</span><span class="p">:</span><span class="s2">"http://rm.recs.richrelevance.com/rrmail/imgreq?a=88ac00e4f3e16e44&amp;version=2&amp;zoneName=richmail&amp;campaignId=77371&amp;userId=483cdb9a2cb6c27af1fa83d499526643&amp;date=07-18-2014&amp;o=123&amp;EMID=B2C_2016_0718_965_Cabinetry"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+         </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"subject"</span><span class="p">:</span><span class="s2">"Additional Savings on Kitchen and Bath Cabinets, Travel, School Essentials and More!"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"company"</span><span class="p">:</span><span class="s2">"Target"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"txt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"textual information in the email"</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+
+</span></pre>
+
+<p>This endpoint gets all favorite scoops for a user. the user has to be authorized</p>
+<h3 id='http-request'>HTTP Request</h1>
+<p><code class="prettyprint">GET /mail/{scoopid}</code></p>
+<h3 id='query-parameters'>Query Parameters</h1>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>limit</td>
+<td>true</td>
+<td>ScoopId</td>
+</tr>
+</tbody></table>
 
           <h1 id='errors'>Errors</h1>
 <p><aside class="notice">This error section is stored in a separate file in <code class="prettyprint">includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the <code class="prettyprint">includes</code> folder and add them to the top of your <code class="prettyprint">index.md</code>&rsquo;s frontmatter. Files are included in the order listed.</aside></p>
