@@ -241,3 +241,62 @@ Parameter | Required | Description
 --------- | ------- | -----------
 page | true  |  for pagination
 limit | true | limits # of records
+
+
+## Add to Favorite
+
+```shell
+curl "/favorite/{scoopid}"
+```
+> The above command returns json:
+
+```json
+
+
+   {
+      "status":true,
+      "count":1
+   }
+
+
+```
+This endpoint saves a scoop to favorite. the user has to be authorized
+
+### HTTP Request
+
+`POST /favorite/{scoopid}`
+
+### Query Parameters
+
+Parameter | Required | Description
+--------- | ------- | -----------
+scoopid | true  | scoop to favorite
+
+## UnFavorite
+
+```shell
+curl "/favorite/{scoopid}"
+```
+> The above command returns json:
+
+```json
+
+
+   {
+      "status":true,
+      "count":1
+   }
+
+
+```
+This endpoint removes a scoop from favorite(unfavorite). the user has to be authorized
+
+### HTTP Request
+
+`DELETE /favorite/{scoopid}`
+
+### Query Parameters
+
+Parameter | Required | Description
+--------- | ------- | -----------
+scoopid | true  | scoop to favorite
