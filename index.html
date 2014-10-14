@@ -97,26 +97,31 @@ Remember —  POST as JSON with application/json Content-Type
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json"><span class="w">
-</span><span class="p">[</span><span class="w">
-   </span><span class="p">{</span><span class="w">
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"limit"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"count"</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"page"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scoops"</span><span class="p">:[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
       </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"d72cf5f7-cad7-42fe-a709-3b4361387300"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"imgobjs"</span><span class="p">:{</span><span class="w">
-         </span><span class="s2">"img"</span><span class="p">:[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-               </span><span class="s2">"area"</span><span class="p">:</span><span class="mi">234360</span><span class="p">,</span><span class="w">
-               </span><span class="s2">"height"</span><span class="p">:</span><span class="mi">310</span><span class="p">,</span><span class="w">
-               </span><span class="s2">"width"</span><span class="p">:</span><span class="mi">756</span><span class="p">,</span><span class="w">
-               </span><span class="s2">"squareRatio"</span><span class="p">:</span><span class="mf">41.00529098510742</span><span class="p">,</span><span class="w">
-               </span><span class="s2">"src"</span><span class="p">:</span><span class="s2">"http://rm.recs.richrelevance.com/rrmail/imgreq?a=88ac00e4f3e16e44&amp;version=2&amp;zoneName=richmail&amp;campaignId=77371&amp;userId=483cdb9a2cb6c27af1fa83d499526643&amp;date=07-18-2014&amp;o=123&amp;EMID=B2C_2016_0718_965_Cabinetry"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-         </span><span class="p">]</span><span class="w">
+        </span><span class="s2">"img"</span><span class="p">:[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"area"</span><span class="p">:</span><span class="mi">234360</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"height"</span><span class="p">:</span><span class="mi">310</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"width"</span><span class="p">:</span><span class="mi">756</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"squareRatio"</span><span class="p">:</span><span class="mf">41.00529098510742</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"src"</span><span class="p">:</span><span class="s2">"http://rm.recs.richrelevance.com/rrmail/imgreq?a=88ac00e4f3e16e44&amp;amp;version=2&amp;amp;zoneName=richmail&amp;amp;campaignId=77371&amp;amp;userId=483cdb9a2cb6c27af1fa83d499526643&amp;amp;date=07-18-2014&amp;amp;o=123&amp;amp;EMID=B2C_2016_0718_965_Cabinetry"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"subject"</span><span class="p">:</span><span class="s2">"Additional Savings on Kitchen and Bath Cabinets, Travel, School Essentials and More!"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"company"</span><span class="p">:</span><span class="s2">"Target"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"txt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"textual information in the email"</span><span class="w">
-   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+      </span><span class="s2">"favorite"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"txt"</span><span class="p">:</span><span class="s2">"textual information in the email"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
 </span></pre>
 
@@ -163,6 +168,7 @@ Remember —  POST as JSON with application/json Content-Type
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"subject"</span><span class="p">:</span><span class="s2">"Additional Savings on Kitchen and Bath Cabinets, Travel, School Essentials and More!"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"company"</span><span class="p">:</span><span class="s2">"Target"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"favorite"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
       </span><span class="s2">"txt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"textual information in the email"</span><span class="w">
    </span><span class="p">}</span><span class="w">
 </span></pre>
@@ -247,25 +253,31 @@ Remember —  POST as JSON with application/json Content-Type
 <p>The above command returns json:</p>
 </blockquote>
 <pre class="highlight json"><span class="w">
-</span><span class="p">[</span><span class="w">
-   </span><span class="p">{</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"limit"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"count"</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"page"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scoops"</span><span class="p">:[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
       </span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"d72cf5f7-cad7-42fe-a709-3b4361387300"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"imgobjs"</span><span class="p">:{</span><span class="w">
-         </span><span class="s2">"img"</span><span class="p">:[</span><span class="w">
-            </span><span class="p">{</span><span class="w">
-               </span><span class="s2">"area"</span><span class="p">:</span><span class="mi">234360</span><span class="p">,</span><span class="w">
-               </span><span class="s2">"height"</span><span class="p">:</span><span class="mi">310</span><span class="p">,</span><span class="w">
-               </span><span class="s2">"width"</span><span class="p">:</span><span class="mi">756</span><span class="p">,</span><span class="w">
-               </span><span class="s2">"squareRatio"</span><span class="p">:</span><span class="mf">41.00529098510742</span><span class="p">,</span><span class="w">
-               </span><span class="s2">"src"</span><span class="p">:</span><span class="s2">"http://rm.recs.richrelevance.com/rrmail/imgreq?a=88ac00e4f3e16e44&amp;version=2&amp;zoneName=richmail&amp;campaignId=77371&amp;userId=483cdb9a2cb6c27af1fa83d499526643&amp;date=07-18-2014&amp;o=123&amp;EMID=B2C_2016_0718_965_Cabinetry"</span><span class="w">
-            </span><span class="p">}</span><span class="w">
-         </span><span class="p">]</span><span class="w">
+        </span><span class="s2">"img"</span><span class="p">:[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"area"</span><span class="p">:</span><span class="mi">234360</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"height"</span><span class="p">:</span><span class="mi">310</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"width"</span><span class="p">:</span><span class="mi">756</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"squareRatio"</span><span class="p">:</span><span class="mf">41.00529098510742</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"src"</span><span class="p">:</span><span class="s2">"http://rm.recs.richrelevance.com/rrmail/imgreq?a=88ac00e4f3e16e44&amp;amp;version=2&amp;amp;zoneName=richmail&amp;amp;campaignId=77371&amp;amp;userId=483cdb9a2cb6c27af1fa83d499526643&amp;amp;date=07-18-2014&amp;amp;o=123&amp;amp;EMID=B2C_2016_0718_965_Cabinetry"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="s2">"subject"</span><span class="p">:</span><span class="s2">"Additional Savings on Kitchen and Bath Cabinets, Travel, School Essentials and More!"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"company"</span><span class="p">:</span><span class="s2">"Target"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"txt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"textual information in the email"</span><span class="w">
-   </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+      </span><span class="s2">"favorite"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"txt"</span><span class="p">:</span><span class="s2">"textual information in the email"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
 </span></pre>
 
