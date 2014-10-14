@@ -69,26 +69,31 @@ curl "/scoop"
 > The above command returns JSON structured like this:
 
 ```json
-
-[
-   {
+{
+  "limit":10,
+  "count":100,
+  "page":1,
+  "scoops":[
+    {
       "id":"d72cf5f7-cad7-42fe-a709-3b4361387300",
       "imgobjs":{
-         "img":[
-            {
-               "area":234360,
-               "height":310,
-               "width":756,
-               "squareRatio":41.00529098510742,
-               "src":"http://rm.recs.richrelevance.com/rrmail/imgreq?a=88ac00e4f3e16e44&version=2&zoneName=richmail&campaignId=77371&userId=483cdb9a2cb6c27af1fa83d499526643&date=07-18-2014&o=123&EMID=B2C_2016_0718_965_Cabinetry"
-            }
-         ]
+        "img":[
+          {
+            "area":234360,
+            "height":310,
+            "width":756,
+            "squareRatio":41.00529098510742,
+            "src":"http://rm.recs.richrelevance.com/rrmail/imgreq?a=88ac00e4f3e16e44&amp;version=2&amp;zoneName=richmail&amp;campaignId=77371&amp;userId=483cdb9a2cb6c27af1fa83d499526643&amp;date=07-18-2014&amp;o=123&amp;EMID=B2C_2016_0718_965_Cabinetry"
+          }
+        ]
       },
       "subject":"Additional Savings on Kitchen and Bath Cabinets, Travel, School Essentials and More!",
       "company":"Target",
-      "txt": "textual information in the email"
-   }
-]
+      "favorite":true,
+      "txt":"textual information in the email"
+    }
+  ]
+}
 
 ```
 
@@ -129,6 +134,7 @@ curl "/scoop/{scoopid}"
       },
       "subject":"Additional Savings on Kitchen and Bath Cabinets, Travel, School Essentials and More!",
       "company":"Target",
+      "favorite": false,
       "txt": "textual information in the email"
    }
 ```
@@ -208,25 +214,31 @@ curl "/favorite/{page}/{limit}"
 
 ```json
 
-[
-   {
+{
+  "limit":10,
+  "count":100,
+  "page":1,
+  "scoops":[
+    {
       "id":"d72cf5f7-cad7-42fe-a709-3b4361387300",
       "imgobjs":{
-         "img":[
-            {
-               "area":234360,
-               "height":310,
-               "width":756,
-               "squareRatio":41.00529098510742,
-               "src":"http://rm.recs.richrelevance.com/rrmail/imgreq?a=88ac00e4f3e16e44&version=2&zoneName=richmail&campaignId=77371&userId=483cdb9a2cb6c27af1fa83d499526643&date=07-18-2014&o=123&EMID=B2C_2016_0718_965_Cabinetry"
-            }
-         ]
+        "img":[
+          {
+            "area":234360,
+            "height":310,
+            "width":756,
+            "squareRatio":41.00529098510742,
+            "src":"http://rm.recs.richrelevance.com/rrmail/imgreq?a=88ac00e4f3e16e44&amp;version=2&amp;zoneName=richmail&amp;campaignId=77371&amp;userId=483cdb9a2cb6c27af1fa83d499526643&amp;date=07-18-2014&amp;o=123&amp;EMID=B2C_2016_0718_965_Cabinetry"
+          }
+        ]
       },
       "subject":"Additional Savings on Kitchen and Bath Cabinets, Travel, School Essentials and More!",
       "company":"Target",
-      "txt": "textual information in the email"
-   }
-]
+      "favorite":true,
+      "txt":"textual information in the email"
+    }
+  ]
+}
 
 ```
 This endpoint gets all favorite scoops for a user. the user has to be authorized
